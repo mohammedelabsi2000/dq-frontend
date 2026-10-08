@@ -1,0 +1,42 @@
+@layer theme, base, primevue, components, utilities;
+
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+@import 'primeicons/primeicons.css';
+
+@theme {
+  --font-sans: 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--p-surface-50);
+  color: var(--p-text-color);
+  margin: 0;
+}
+
+:root {
+  --p-font-family: var(--font-sans);
+}
+
+.p-component,
+.p-inputtext,
+.p-button {
+  font-family: var(--font-sans);
+}
+
+/* ترويسة الجداول أوضح قليلاً */
+.p-datatable .p-datatable-thead > tr > th {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.field-error {
+  color: var(--p-red-500);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
